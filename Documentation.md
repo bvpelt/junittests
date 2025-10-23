@@ -15,6 +15,51 @@ See https://www.youtube.com/watch?v=TrW-mtmEa44&list=PL5Agzt13Z4g_D7RjXZN8h3nR_G
     
 # part 2
 
-Add local angular project to remote github.com
+See https://www.youtube.com/watch?v=IbHOkXR8l2o&list=PL5Agzt13Z4g_D7RjXZN8h3nR_Gpf-rcjJ&index=2
 
-git remote add origin https://github.com/<your-username>/junittests.git
+For angular when creating a component <component.ts> there will also be a <component.spec.ts> file used to test the component.
+
+For the generated application the following application test is created (Angular 19)
+
+```ts
+describe('AppComponent', () => {
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      imports: [AppComponent],
+    }).compileComponents();
+  });
+
+  it('should create the app', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.componentInstance;
+    expect(app).toBeTruthy();
+  });
+
+  it(`should have the 'junittests' title`, () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.componentInstance;
+    expect(app.title).toEqual('junittests');
+  });
+
+  it('should render title', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    fixture.detectChanges();
+    const compiled = fixture.nativeElement as HTMLElement;
+    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, junittests');
+  });
+});
+```
+
+- describe defines the component to test, in this case 'AppComponent'
+- it with a title is an actual testcase for this component
+
+Angular testing package includes two utilities called TestBed and async.
+- TestBed is the main Angular utility package
+- The describe container has different blocks:
+    - it
+    - beforeEach
+    - xit
+    - ...
+- beforeEach runs before any other block. Other blocks do not depend on each other.
+
+![testflow](./images/testflow.png)

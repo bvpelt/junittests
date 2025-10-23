@@ -105,4 +105,63 @@ Execute test from command line using
 ng test --include="src/app"
 ```
 
-This scans the src/app (sub)directories for *.spec.ts files to execute.
+This scans the src/app (sub)directories for \*.spec.ts files to execute.
+
+# part 4
+
+see https://www.youtube.com/watch?v=EiQnQ6JHq9M&list=PL5Agzt13Z4g_D7RjXZN8h3nR_Gpf-rcjJ&index=4
+
+Jasmin and Karma Configuration with Angular
+
+The [package.json](./package.json) file contains in the devDependencies section:
+
+```json
+    "@types/jasmine": "~5.1.0",
+    "jasmine-core": "~5.6.0",
+    "karma": "~6.4.0",
+    "karma-chrome-launcher": "~3.2.0",
+    "karma-coverage": "~2.2.0",
+    "karma-jasmine": "~5.1.0",
+    "karma-jasmine-html-reporter": "~2.1.0",
+```
+
+These package are related to Karma and Jasmin needed for testing.
+
+The angular.json file contains specification for testing
+
+```json
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ],
+            "tsConfig": "tsconfig.spec.json",
+            "assets": [
+              {
+                "glob": "**/*",
+                "input": "public"
+              }
+            ],
+            "styles": [
+              "src/styles.css"
+            ],
+            "scripts": []
+          }
+```
+In Angular V19 there is no karma.conf.js since the Angular development team began deprecating Karma in favor of runners like Jest and the Web Test Runner (WTR). This change has become more apparent in the latest versions (like v17, v18, and v19).
+
+If needed a karma config file can be created by
+
+```bash
+ng generate config karma
+```
+
+Setting default browser
+
+```bash
+ng test --browsers=ChromeHeadless # chrome headless
+ng test --browsers=Chrome         # chrome browser
+ng test --browsers=Firefox        # firefox browser
+```

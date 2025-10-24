@@ -335,3 +335,74 @@ See https://www.youtube.com/watch?v=GjaIrJSZiuI&list=PL5Agzt13Z4g_D7RjXZN8h3nR_G
 
 Several matchers
 
+# part 14
+
+See https://www.youtube.com/watch?v=RP2wLIxGzvk&list=PL5Agzt13Z4g_D7RjXZN8h3nR_Gpf-rcjJ&index=14
+
+beforeEach and afterEach
+
+- beforeEach is run before each test
+- afterEach is run after each test
+
+Created a new component to show effects of beforeEach/afterEach test
+
+```bash
+ng generate component header
+```
+
+To show the output of the src/app/header/header.component.spec.ts use from the project root folder
+
+```bash
+ng test --include src/app/header
+```
+
+The header.component.spec.ts contains
+
+```ts
+import { ComponentFixture, TestBed } from "@angular/core/testing";
+
+import { HeaderComponent } from "./header.component";
+
+describe("HeaderComponent", () => {
+  it("test 1", () => {
+    console.log("HeaderComponent test 1");
+  });
+
+  it("test 2", () => {
+    console.log("HeaderComponent test 2");
+  });
+
+  it("test 3", () => {
+    console.log("HeaderComponent test 3");
+  });
+});
+```
+
+After adding a beforeEach the header.component.spec.ts file contains
+
+```ts
+import { ComponentFixture, TestBed } from "@angular/core/testing";
+
+import { HeaderComponent } from "./header.component";
+
+describe("HeaderComponent", () => {
+
+  beforeEach(function () {
+    console.log("HeaderComponent beforeEach");
+  });
+
+  it("test 1", () => {
+    console.log("HeaderComponent test 1");
+  });
+
+  it("test 2", () => {
+    console.log("HeaderComponent test 2");
+  });
+
+  it("test 3", () => {
+    console.log("HeaderComponent test 3");
+  });
+});
+```
+
+with as output ![test output](./images/beforeeach.png)

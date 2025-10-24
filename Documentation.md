@@ -309,3 +309,13 @@ ToBeGreaterThan,ToBeLessThan, ToBeGreaterThanOrEqual and ToBeLessThanOrEqual
 - toBeGreaterThan is a comparison function that evaluates to true or false
 - toBeLessThan is a comparison function that evaluates to true or false
 - toBeGreaterThanOrEqual is a comparison function that evaluates to true or false
+- toBeLessThanOrEqual is a comparison function that evaluates to true or false
+
+# part 11
+
+See https://www.youtube.com/watch?v=mhH-qQhrl-8&list=PL5Agzt13Z4g_D7RjXZN8h3nR_Gpf-rcjJ&index=11
+
+toMatch and toBeCloseTo
+
+- toMatch is used to match regular expressions
+- toBeCloseTo checks if a given number is close (given number of precision) to another number

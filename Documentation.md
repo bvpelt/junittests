@@ -416,3 +416,24 @@ BeforeAll and AfterAll
 - beforeAll executes only once before the describing block 
 - afterAll executes only once after the describing block
 
+# part 16
+
+See https://www.youtube.com/watch?v=hw0OWwv2orI&list=PL5Agzt13Z4g_D7RjXZN8h3nR_Gpf-rcjJ&index=16
+
+Arrange Act Assert
+
+- Arrange inputs and targets. Arrange should setup the test case.
+- Act on target behaviour. Act steps should cover the main thing to be tested.
+- Assert expected outcomes. Assert verifies the outcome of Act steps.
+
+Created a new component to show effects of beforeEach/afterEach test
+
+```bash
+ng generate component arrange
+```
+
+To show the output of the src/app/arrange/arrange.component.spec.ts use from the project root folder
+
+```bash
+ng test --include src/app/arrange
+```

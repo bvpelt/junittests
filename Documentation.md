@@ -239,3 +239,15 @@ Matchers:
   - builtin
   - custom
 
+# part 8
+
+See https://www.youtube.com/watch?v=HnBjT8CM-Wk&list=PL5Agzt13Z4g_D7RjXZN8h3nR_Gpf-rcjJ&index=8
+
+ToBe and ToEqual matchers
+
+## ToBe
+ToBe is a matcher for primitive types like strings, numbers, booleans.
+
+## ToEqual
+ToEqual is a matcher for anything, primitive types and non primitive types.
+

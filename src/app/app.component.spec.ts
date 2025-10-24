@@ -61,7 +61,7 @@ describe("AppComponent", () => {
     expect(multiply(a, b)).toEqual(6);
   });
 
-  xit("Check multiply negative number", () => {
+  it("Check multiply negative number", () => {
     let a = -2;
     let b = -3;
     expect(multiply(a, b)).toEqual(6);
@@ -71,5 +71,31 @@ describe("AppComponent", () => {
     let a = 2;
     let b = 3;
     expect(divide(a, b)).toEqual(0.6666666666666666);
+  });
+
+  it("ToBe vs ToEqual string", () => {
+    var a = "hello";
+    var b = "hello";
+    expect(a).toBe(b); // passes because both have the same string
+    expect(a).toEqual(b); // passes because both have the same string
+  });
+
+  it("ToBe vs ToEqual number", () => {
+    var a = 3;
+    var b = 3;
+    expect(a).toBe(b); // passes because both are the same number
+    expect(a).toEqual(b); // passes because both are the same number
+  });
+
+  xit("ToBe vs ToEqual array tobe", () => {
+    var a = ["1"];
+    var b = ["1"];
+    expect(a).toBe(b); // fails because ToBe only works for primitive types
+  });
+
+  it("ToBe vs ToEqual array toequal", () => {
+    var a = ["1"];
+    var b = ["1"];
+    expect(a).toEqual(b); // passes
   });
 });

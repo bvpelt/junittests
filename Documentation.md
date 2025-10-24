@@ -319,3 +319,13 @@ toMatch and toBeCloseTo
 
 - toMatch is used to match regular expressions
 - toBeCloseTo checks if a given number is close (given number of precision) to another number
+
+# part 12
+
+See https://www.youtube.com/watch?v=mxzog_kNLjE&list=PL5Agzt13Z4g_D7RjXZN8h3nR_Gpf-rcjJ&index=12
+
+toBeDefined and toBeUndefined
+
+- toBeDefined compare against defined
+- toBeUndefined compare against undefined
+

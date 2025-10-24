@@ -165,3 +165,10 @@ ng test --browsers=ChromeHeadless # chrome headless
 ng test --browsers=Chrome         # chrome browser
 ng test --browsers=Firefox        # firefox browser
 ```
+
+# part 5
+
+See https://www.youtube.com/watch?v=XC0AOzvXMsA&list=PL5Agzt13Z4g_D7RjXZN8h3nR_Gpf-rcjJ&index=5
+
+First Angular unit test case
+

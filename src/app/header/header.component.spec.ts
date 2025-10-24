@@ -5,6 +5,14 @@ import { HeaderComponent } from "./header.component";
 describe("HeaderComponent", () => {
   var specificComponent: HeaderComponent | null = null;
 
+  beforeAll(function () {
+    console.log("HeaderComponent beforeAll");
+  });
+
+  afterAll(function () {
+    console.log("HeaderComponent afterAll");
+  });
+
   beforeEach(function () {
     specificComponent = new HeaderComponent(); // Create a new instance for each test
 
@@ -72,7 +80,7 @@ describe("HeaderComponent", () => {
     expect(globalComponent.Count).toEqual(initialCount - decreaseBy);
   });
 
-    it("Specific IncreaseCount method should increase Count by given number", () => {
+  it("Specific IncreaseCount method should increase Count by given number", () => {
     const initialCount = specificComponent!.Count;
     const increaseBy = 5;
 

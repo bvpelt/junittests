@@ -406,3 +406,13 @@ describe("HeaderComponent", () => {
 ```
 
 with as output ![test output](./images/beforeeach.png)
+
+# part 15
+
+See https://www.youtube.com/watch?v=scOB_gqgt7g&list=PL5Agzt13Z4g_D7RjXZN8h3nR_Gpf-rcjJ&index=15
+
+BeforeAll and AfterAll
+
+- beforeAll executes only once before the describing block 
+- afterAll executes only once after the describing block
+

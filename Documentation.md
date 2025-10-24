@@ -226,3 +226,16 @@ xdescribe("AppComponent", () => {
   let component = new AppComponent();
 }
 ```
+# part 7
+
+See https://www.youtube.com/watch?v=oz36gLrnfZU&list=PL5Agzt13Z4g_D7RjXZN8h3nR_Gpf-rcjJ&index=7
+
+Jasmin matchers in Angular test cases
+
+Matchers:
+- are compare functions to verify a test values matches the expected value
+- use javascript functions to do the compare and return a boolean representing if the match is successfull
+- there are two type of matchers
+  - builtin
+  - custom
+

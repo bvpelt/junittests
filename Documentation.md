@@ -150,6 +150,7 @@ The angular.json file contains specification for testing
             "scripts": []
           }
 ```
+
 In Angular V19 there is no karma.conf.js since the Angular development team began deprecating Karma in favor of runners like Jest and the Web Test Runner (WTR). This change has become more apparent in the latest versions (like v17, v18, and v19).
 
 If needed a karma config file can be created by
@@ -172,3 +173,56 @@ See https://www.youtube.com/watch?v=XC0AOzvXMsA&list=PL5Agzt13Z4g_D7RjXZN8h3nR_G
 
 First Angular unit test case
 
+# part 6
+
+https://www.youtube.com/watch?v=uSkeQ9WZRXg&list=PL5Agzt13Z4g_D7RjXZN8h3nR_Gpf-rcjJ&index=6
+
+Exclude Angular unit test from execution
+
+examples
+
+## Exclude a specific test
+
+To exclude an Angular unit test use xit instead of it
+
+The [application.component.spec.ts](./src/app/app.component.spec.ts) contains a test to check multiply
+
+to enable the test use:
+
+```ts
+it("Check multiply", () => {
+  let a = 2;
+  let b = 3;
+  expect(multiply(a, b)).toEqual(6);
+});
+```
+
+to disable the test use:
+
+```ts
+xit("Check multiply", () => {
+  let a = 2;
+  let b = 3;
+  expect(multiply(a, b)).toEqual(6);
+});
+```
+
+## Exclude the component test
+
+To exclude the complete component test prefix `describe` with x giving `xdescribe`
+
+to enable the component test use:
+
+```ts
+describe("AppComponent", () => {
+  let component = new AppComponent();
+}
+```
+
+to disable the component test use:
+
+```ts
+xdescribe("AppComponent", () => {
+  let component = new AppComponent();
+}
+```

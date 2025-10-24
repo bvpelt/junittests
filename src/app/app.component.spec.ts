@@ -55,16 +55,21 @@ describe("AppComponent", () => {
     expect(subtract(a, b)).toEqual(-1);
   });
 
- it("Check multiply", () => {
+  it("Check multiply", () => {
     let a = 2;
     let b = 3;
     expect(multiply(a, b)).toEqual(6);
   });
 
- it("Check divide", () => {
+  xit("Check multiply negative number", () => {
+    let a = -2;
+    let b = -3;
+    expect(multiply(a, b)).toEqual(6);
+  });
+
+  it("Check divide", () => {
     let a = 2;
     let b = 3;
     expect(divide(a, b)).toEqual(0.6666666666666666);
   });
-
 });

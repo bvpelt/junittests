@@ -293,10 +293,19 @@ expect(0).toBeTruthy(); // false
 expect(undefined).toBeTruthy(); // false
 expect(NaN).toBeTruthy(); // false
 expect(false).toBeTruthy(); // false
-expect('').toBeTruthy(); // false
-
+expect("").toBeTruthy(); // false
 ```
 
 ## toBeFalsy
 
 - check if result equal to false
+
+# part 10
+
+See https://www.youtube.com/watch?v=LQStUjhJMGc&list=PL5Agzt13Z4g_D7RjXZN8h3nR_Gpf-rcjJ&index=10
+
+ToBeGreaterThan,ToBeLessThan, ToBeGreaterThanOrEqual and ToBeLessThanOrEqual
+
+- toBeGreaterThan is a comparison function that evaluates to true or false
+- toBeLessThan is a comparison function that evaluates to true or false
+- toBeGreaterThanOrEqual is a comparison function that evaluates to true or false

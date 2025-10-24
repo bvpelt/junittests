@@ -139,4 +139,28 @@ describe("AppComponent", () => {
     var a = undefined;
     expect(a).toBeFalse(); // fails
   });
+
+  it("ToBeGreaterThan", () => {
+    var a = 5;
+    expect(a).toBeGreaterThan(3); // passes
+    // expect(a).toBeGreaterThan(5); // fails
+  });
+
+  it("ToBeLessThan", () => {
+    var a = 5;
+    expect(a).toBeLessThan(7); // passes
+    // expect(a).toBeLessThan(5); // fails
+  });
+
+  it("ToBeGreaterThanOrEqual", () => {
+    var a = 5;
+    expect(a).toBeGreaterThanOrEqual(5); // passes
+    // expect(a).toBeGreaterThanOrEqual(6); // fails
+  });
+
+  it("ToBeLessThanOrEqual", () => {
+    var a = 5;
+    expect(a).toBeLessThanOrEqual(7); // passes
+    expect(a).toBeLessThanOrEqual(5); // fails
+  });
 });

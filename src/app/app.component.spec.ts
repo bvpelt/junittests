@@ -87,15 +87,56 @@ describe("AppComponent", () => {
     expect(a).toEqual(b); // passes because both are the same number
   });
 
-  xit("ToBe vs ToEqual array tobe", () => {
+  xit("ToBe vs ToEqual array toBe", () => {
     var a = ["1"];
     var b = ["1"];
     expect(a).toBe(b); // fails because ToBe only works for primitive types
   });
 
-  it("ToBe vs ToEqual array toequal", () => {
+  it("ToBe vs ToEqual array toEqual", () => {
     var a = ["1"];
     var b = ["1"];
     expect(a).toEqual(b); // passes
+  });
+
+  it("ToBeTrue", () => {
+    var a = true;
+    var b = ["1"];
+    var c = ["1"];
+    // expect(a).toEqual(b); // does not compile
+    expect(a).toBeTrue(); // passes
+    expect(a).toBe(true); // passes
+    expect(b === b).toBeTrue(); // passes same reference
+    //expect(b === c).toBeTrue(); // fails because different references
+  });
+
+  it("ToBeFalse", () => {
+    var a = true;
+    var b = ["1"];
+    var c = ["1"];
+
+    //expect(a).toBeFalse(); // fails
+    expect(!a).toBeFalse(); // passes
+    expect(a).toBe(!false); // passes
+  });
+
+  it("ToBeTruthy true", () => {
+    var a = true;
+    expect(a).toBeTruthy(); // passes
+  });
+
+  xit("ToBeTruthy undefined", () => {
+    var a = undefined;
+    expect(a).toBeTruthy(); // fails
+  });
+
+  it("ToBeFalsy undefined", () => {
+    var a = undefined;
+    expect(a).toBeFalsy(); // passes
+  });
+
+  xit("ToBeFalse undefined", () => {
+    var a = undefined;
+    expect(a).toBeFalse(); // fails
   });
 });

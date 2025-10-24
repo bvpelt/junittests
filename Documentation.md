@@ -226,6 +226,7 @@ xdescribe("AppComponent", () => {
   let component = new AppComponent();
 }
 ```
+
 # part 7
 
 See https://www.youtube.com/watch?v=oz36gLrnfZU&list=PL5Agzt13Z4g_D7RjXZN8h3nR_Gpf-rcjJ&index=7
@@ -233,6 +234,7 @@ See https://www.youtube.com/watch?v=oz36gLrnfZU&list=PL5Agzt13Z4g_D7RjXZN8h3nR_G
 Jasmin matchers in Angular test cases
 
 Matchers:
+
 - are compare functions to verify a test values matches the expected value
 - use javascript functions to do the compare and return a boolean representing if the match is successfull
 - there are two type of matchers
@@ -246,8 +248,55 @@ See https://www.youtube.com/watch?v=HnBjT8CM-Wk&list=PL5Agzt13Z4g_D7RjXZN8h3nR_G
 ToBe and ToEqual matchers
 
 ## ToBe
+
 ToBe is a matcher for primitive types like strings, numbers, booleans.
 
 ## ToEqual
+
 ToEqual is a matcher for anything, primitive types and non primitive types.
 
+# part 9
+
+See https://www.youtube.com/watch?v=rLTkvlm5e1o&list=PL5Agzt13Z4g_D7RjXZN8h3nR_Gpf-rcjJ&index=9
+
+Builtin matchers
+
+There are a lot of builtin matchers:
+
+- toBe
+- toBeTrue
+- toBeTruthy
+- toBeFalsy
+
+## toBe
+
+- performs test actual === expected
+- syntax expect(flag).toBe(true|false), this only passes if the value of flag matches true|false
+- can only be uses for primitive boolean type
+
+## toBeTrue
+
+- performs test (actual === true || is(actual, 'Boolean') && actual.valueOf())
+- syntace expact(flag).toBeTrue()
+- can be used for primitive boolean type and a Boolean object
+
+## toBeTruthy
+
+- check if result is equal true
+
+examples:
+
+```javascript
+expect(true).toBeTruthy(); // true
+expect("1").toBeTruthy(); // true
+expect(0).toBeTruthy(); // false
+expect(undefined).toBeTruthy(); // false
+expect(NaN).toBeTruthy(); // false
+expect(false).toBeTruthy(); // false
+expect('').toBeTruthy(); // false
+
+```
+
+## toBeFalsy
+
+- check if result equal to false

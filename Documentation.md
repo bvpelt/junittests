@@ -437,3 +437,34 @@ To show the output of the src/app/arrange/arrange.component.spec.ts use from the
 ```bash
 ng test --include src/app/arrange
 ```
+
+# part 17
+
+See https://www.youtube.com/watch?v=OIrKMeT84gg&list=PL5Agzt13Z4g_D7RjXZN8h3nR_Gpf-rcjJ&index=17
+
+TestBed and Component Fixture
+
+Created a new component to show effects of beforeEach/afterEach test
+
+```bash
+ng generate component student
+```
+
+To show the output of the src/app/arrange/student.component.spec.ts use from the project root folder
+
+```bash
+ng test --include src/app/student
+```
+
+ATB (Angular Test Bed) is a high level Angular Only testing framework which allows easy test behaviours that depend on the Angular framework.
+
+When to use ATB
+- test interaction of a directive or component with its template
+- test change detection
+- gives access to components and services for unit testing
+- test the Angular dependency injection (DI) framework
+- test using NgModule configuration in the application
+- test userinteraction from clicks and input fields
+
+
+https://youtu.be/OIrKMeT84gg?si=mG5sEGMoRWA0eazv&t=475

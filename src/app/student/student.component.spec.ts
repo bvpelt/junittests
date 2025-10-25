@@ -1,10 +1,9 @@
 import { ComponentFixture, TestBed } from "@angular/core/testing";
-import { provideHttpClient } from '@angular/common/http'; // <-- Import this
+import { provideHttpClient } from "@angular/common/http";
 import { StudentService } from "../services/student.service";
 import { StudentComponent } from "./student.component";
 import { provideRouter } from "@angular/router";
 import { of } from "rxjs";
-
 
 describe("StudentComponent", () => {
   let component: StudentComponent;
@@ -21,7 +20,7 @@ describe("StudentComponent", () => {
 
     // NOTE: For the 'SpyOn method' test to work, 'calculate' must exist on StudentComponent
     if (!component.calculate) {
-       (component as any).calculate = (a: number, b: number) => a + b;
+      (component as any).calculate = (a: number, b: number) => a + b;
     }
     fixture.detectChanges();
   });
@@ -31,10 +30,35 @@ describe("StudentComponent", () => {
   });
 
   it("SpyOn method", () => {
-    const spy = spyOn(component as any, "calculate").and.returnValue(15);
-    const result = (component as any).calculate(7, 8);
+    let spy = spyOn(component, "calculate");
+    component.saveData();
     expect(spy).toHaveBeenCalled();
-    expect(result).toBe(15);
   });
-  
+
+  it("SpyOn method - 1", () => {
+    spyOn(component, "calculate").and.returnValues(10, 20);
+    let result = component.StudentResult();
+    expect(result).toEqual("Fail");
+  });
+
+  it("SpyOn method - 2", () => {
+    spyOn(component, "calculate").and.returnValues(40, 20);
+    let result = component.StudentResult();
+    expect(result).toEqual("Pass");
+  });
+
+  it("SpyOn method - 3", () => {
+    let service = fixture.debugElement.injector.get(StudentService);
+    let spy = spyOn(service, "SaveDetails").and.callFake(() => {
+
+      return of( {
+        "result1": 200
+      })
+    });
+    component.saveData();
+    expect(component.result).toEqual( {
+      "result1": 200
+    })
+  });
+
 });

@@ -1,13 +1,17 @@
 import { HttpClient } from "@angular/common/http";
 import { Injectable, inject } from "@angular/core";
+import { of } from "rxjs";
 
 @Injectable({
   providedIn: "root",
 })
 export class StudentService {
-  private http = inject(HttpClient);
+  public http = inject(HttpClient);
+
+  private apiUrl = '/api/students';
 
   SaveDetails(info: any) {
-    return this.http.post("https://localhost:4200", info);
+    console.log("Service SaveDetails called  with:", JSON.stringify(info));
+    return this.http.post(this.apiUrl, info);
   }
 }

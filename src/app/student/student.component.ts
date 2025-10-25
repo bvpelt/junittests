@@ -16,6 +16,7 @@ export class StudentComponent implements OnInit {
   ngOnInit(): void {}
 
   calculate(num1: number, num2: number): number {
+    console.log("Calculate method called with:", num1, num2);
     this.sum = num1 + num2;
     return this.sum;
   }
@@ -26,9 +27,16 @@ export class StudentComponent implements OnInit {
       name: "Dot Net Office",
     };
 
+    console.log("StudentComponent SaveData called with:", JSON.stringify(info));
     this.SaveDataIntoConsole(info);
-    this.service.SaveDetails(info).subscribe((response) => {
-      this.result = response;
+    this.service.SaveDetails(info).subscribe({
+      next: response => {
+        this.result = response;
+      },
+      error: error =>{
+        console.log("Error occurred while saving details:", error);
+        this.result = { error: 'Failed to save details' };
+      }
     });
   }
 
@@ -41,6 +49,6 @@ export class StudentComponent implements OnInit {
   }
 
   SaveDataIntoConsole(data: any) {
-    console.log("Data to be saved:", data);
+    console.log("Data to be saved:", JSON.stringify(data));
   }
 }

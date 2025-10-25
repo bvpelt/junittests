@@ -467,4 +467,17 @@ When to use ATB
 - test userinteraction from clicks and input fields
 
 
-https://youtu.be/OIrKMeT84gg?si=mG5sEGMoRWA0eazv&t=475
+# part 18
+
+SpyOn to mock and Stub methods in angular unit test
+
+SpyOn is a jasmin method
+- that allows us to mock the execution of an Angular method
+- check wheter a method was called on not, without leaving Subject Under Test (SUT)
+- that supports chaining to get dummy return values using `.and.returnvalue()`
+- that can call the original function using `.and.callThrough()`
+
+Comparison
+- *Stub*: Stub is a dummy piece of code that lets test run, but you don't care what happens.
+- *Mock*: Mock is a dummy piece of code that you **VERIFY** is called correctly as part of the test.
+- *Spy*: Spy is a dummy piece of code that intercepts some calls to a real piece of code, allowing you to verify calls without replacing the entire original object.

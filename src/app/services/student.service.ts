@@ -8,6 +8,8 @@ import { of } from "rxjs";
 export class StudentService {
   public http = inject(HttpClient);
 
+  //constructor(public http: HttpClient) {}
+
   private apiUrl = '/api/students';
 
   SaveDetails(info: any) {

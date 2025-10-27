@@ -29,15 +29,22 @@ export class StudentComponent implements OnInit {
 
     console.log("StudentComponent SaveData called with:", JSON.stringify(info));
     this.SaveDataIntoConsole(info);
-    this.service.SaveDetails(info).subscribe({
-      next: response => {
-        this.result = response;
-      },
-      error: error =>{
-        console.log("Error occurred while saving details:", error);
-        this.result = { error: 'Failed to save details' };
-      }
-    });
+    try {
+      console.log("Attempting to save details via service...");
+
+      this.service.SaveDetails(info).subscribe({
+        next: (response) => {
+          this.result = response;
+        },
+        error: (error) => {
+          console.log("Error occurred while saving details:", error);
+          this.result = { error: "Failed to save details" };
+        },
+      });
+    } catch (error) {
+      console.log("Exception caught while calling service:", error);
+    }
+    console.log("SaveData method completed.");
   }
 
   StudentResult() {

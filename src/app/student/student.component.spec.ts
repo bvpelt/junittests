@@ -50,15 +50,15 @@ describe("StudentComponent", () => {
   it("SpyOn method - 3", () => {
     let service = fixture.debugElement.injector.get(StudentService);
     let spy = spyOn(service, "SaveDetails").and.callFake(() => {
-
-      return of( {
-        "result1": 200
-      })
+      return of({
+        result1: 200,
+      });
     });
+    // call the stub method saveDataIntoConsole
+    spyOn(component, "SaveDataIntoConsole").and.stub();
     component.saveData();
-    expect(component.result).toEqual( {
-      "result1": 200
-    })
+    expect(component.result).toEqual({
+      result1: 200,
+    });
   });
-
 });

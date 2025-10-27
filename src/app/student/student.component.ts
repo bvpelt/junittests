@@ -12,6 +12,8 @@ export class StudentComponent implements OnInit {
   result: any;
   studentResult: string = "";
   CountNumber: number = 0;
+  name: string = "";
+  private pname: string = "";
 
   constructor(public service: StudentService) {}
 
@@ -77,5 +79,17 @@ export class StudentComponent implements OnInit {
 
   increaseNumber(): void {
     this.CountNumber++;
-  } 
+  }
+
+  private pcalculate(num1: number, num2: number): number {
+    console.log("Calculate method called with:", num1, num2);
+    this.sum = num1 + num2;
+    return this.sum;
+  }
+
+  private ShowName(): string {
+    this.name = "Dot Net Office";
+    this.pname = this.name;
+    return this.name;
+  }
 }

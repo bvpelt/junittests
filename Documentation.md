@@ -506,3 +506,9 @@ Debugging element and DOM events
 - triggerEventHandler is a function that exists on Angulars DebugElement.
 - See https://angular.io/api/core/DebugElement 
 
+# part 21
+
+See https://www.youtube.com/watch?v=Qx_biJBb5xc&list=PL5Agzt13Z4g_D7RjXZN8h3nR_Gpf-rcjJ&index=21
+
+Call private Methods and inspect private variables
+

@@ -8,6 +8,7 @@ import { of } from "rxjs";
 describe("StudentComponent", () => {
   let component: StudentComponent;
   let fixture: ComponentFixture<StudentComponent>;
+  let h1: HTMLElement;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
@@ -16,6 +17,9 @@ describe("StudentComponent", () => {
     }).compileComponents();
 
     fixture = TestBed.createComponent(StudentComponent);
+
+    h1 = fixture.nativeElement.querySelector("h1");
+
     component = fixture.componentInstance;
 
     // NOTE: For the 'SpyOn method' test to work, 'calculate' must exist on StudentComponent
@@ -60,5 +64,11 @@ describe("StudentComponent", () => {
     expect(component.result).toEqual({
       result1: 200,
     });
+  });
+
+  it("Verify h1 element", () => {
+    component.StudentSchoolResult();
+    fixture.detectChanges(); // Cruxial: Initial value is '', make sure latest changes are reflected
+    expect(h1.textContent).toBe(component.studentResult);
   });
 });

@@ -10,7 +10,8 @@ import { StudentService } from "../services/student.service";
 export class StudentComponent implements OnInit {
   sum: number = 0;
   result: any;
-
+  studentResult: string = "";
+  
   constructor(public service: StudentService) {}
 
   ngOnInit(): void {}
@@ -52,6 +53,16 @@ export class StudentComponent implements OnInit {
       return "Pass";
     } else {
       return "Fail";
+    }
+  }
+
+  StudentSchoolResult() {
+    if (this.calculate(10, 20) >= 40) {
+      this.studentResult = "Pass";
+      return this.studentResult;
+    } else {
+      this.studentResult = "Fail";
+      return this.studentResult;
     }
   }
 

@@ -481,3 +481,14 @@ Comparison
 - *Stub*: Stub is a dummy piece of code that lets test run, but you don't care what happens.
 - *Mock*: Mock is a dummy piece of code that you **VERIFY** is called correctly as part of the test.
 - *Spy*: Spy is a dummy piece of code that intercepts some calls to a real piece of code, allowing you to verify calls without replacing the entire original object.
+
+# part 19
+
+See https://www.youtube.com/watch?v=KlYRjvT1DTE&list=PL5Agzt13Z4g_D7RjXZN8h3nR_Gpf-rcjJ&index=19
+
+Change detection
+
+- change detection is the backbone of the Angular framework, each component has its own change detector.
+- Angular detects changes in the data of the component and can rerender the view of the component data. Angular make sure the model and view of the data in the component are in sync.
+- change detection means updating the view when the model (data) change.
+

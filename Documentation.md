@@ -512,3 +512,9 @@ See https://www.youtube.com/watch?v=Qx_biJBb5xc&list=PL5Agzt13Z4g_D7RjXZN8h3nR_G
 
 Call private Methods and inspect private variables
 
+# part 22
+
+See https://www.youtube.com/watch?v=oZjdvSs8_Jk&list=PL5Agzt13Z4g_D7RjXZN8h3nR_Gpf-rcjJ&index=22
+
+Spyon private methods
+

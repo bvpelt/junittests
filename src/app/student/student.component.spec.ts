@@ -146,4 +146,20 @@ describe("StudentComponent", () => {
     expect((component as any).pname).toBe("Dot Net Office");
     expect(component["pname"]).toBe("Dot Net Office");
   });
+
+  it("Spyon Private method pcalculate test", () => {
+    let spyMethod = spyOn(component as any, "pcalculate");
+    // let spyMethod = spyOn<any>(component, "pcalculate"); // Alternative syntax but not combined with previous line
+    const result = (component as any).pcalculate(15, 25);
+
+    expect(spyMethod).toHaveBeenCalled();
+  });
+
+  it("Spyon Private method ShowName test", () => {
+    let spyName = spyOn(component as any, "ShowName");
+    // let spyName = spyOn<any>(component, "ShowName"); // Alternative syntax but not combined with previous line
+    const name = (component as any).ShowName();
+    // const name = component.ShowName(); // This will give error as ShowName is private
+    expect(spyName).toHaveBeenCalled();
+  });
 });

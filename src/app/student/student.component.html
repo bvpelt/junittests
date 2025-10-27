@@ -2,4 +2,22 @@
 
 <button (click)="StudentSchoolResult()">Get Result</button>
 
-<h1>{{studentResult}}</h1>
+<button
+  id="btnincreaseNumber"
+  (click)="increaseNumber()"
+  class="btn btn-primary"
+>
+  Increase Number
+</button>
+<button
+  id="btndecreaseNumber"
+  (click)="decreaseNumber()"
+  class="btn btn-primary"
+  style="margin-left: 10px"
+>
+  Decrease Number
+</button>
+
+<h1>{{ studentResult }}</h1>
+
+<h1 id="countnumber">{{ CountNumber }}</h1>

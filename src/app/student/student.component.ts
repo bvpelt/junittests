@@ -11,7 +11,8 @@ export class StudentComponent implements OnInit {
   sum: number = 0;
   result: any;
   studentResult: string = "";
-  
+  CountNumber: number = 0;
+
   constructor(public service: StudentService) {}
 
   ngOnInit(): void {}
@@ -69,4 +70,12 @@ export class StudentComponent implements OnInit {
   SaveDataIntoConsole(data: any) {
     console.log("Data to be saved:", JSON.stringify(data));
   }
+
+  decreaseNumber(): void {
+    this.CountNumber--;
+  }
+
+  increaseNumber(): void {
+    this.CountNumber++;
+  } 
 }

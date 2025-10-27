@@ -386,7 +386,6 @@ import { ComponentFixture, TestBed } from "@angular/core/testing";
 import { HeaderComponent } from "./header.component";
 
 describe("HeaderComponent", () => {
-
   beforeEach(function () {
     console.log("HeaderComponent beforeEach");
   });
@@ -413,7 +412,7 @@ See https://www.youtube.com/watch?v=scOB_gqgt7g&list=PL5Agzt13Z4g_D7RjXZN8h3nR_G
 
 BeforeAll and AfterAll
 
-- beforeAll executes only once before the describing block 
+- beforeAll executes only once before the describing block
 - afterAll executes only once after the describing block
 
 # part 16
@@ -459,6 +458,7 @@ ng test --include src/app/student
 ATB (Angular Test Bed) is a high level Angular Only testing framework which allows easy test behaviours that depend on the Angular framework.
 
 When to use ATB
+
 - test interaction of a directive or component with its template
 - test change detection
 - gives access to components and services for unit testing
@@ -466,21 +466,22 @@ When to use ATB
 - test using NgModule configuration in the application
 - test userinteraction from clicks and input fields
 
-
 # part 18
 
 SpyOn to mock and Stub methods in angular unit test
 
 SpyOn is a jasmin method
+
 - that allows us to mock the execution of an Angular method
 - check wheter a method was called on not, without leaving Subject Under Test (SUT)
 - that supports chaining to get dummy return values using `.and.returnvalue()`
 - that can call the original function using `.and.callThrough()`
 
 Comparison
-- *Stub*: Stub is a dummy piece of code that lets test run, but you don't care what happens.
-- *Mock*: Mock is a dummy piece of code that you **VERIFY** is called correctly as part of the test.
-- *Spy*: Spy is a dummy piece of code that intercepts some calls to a real piece of code, allowing you to verify calls without replacing the entire original object.
+
+- _Stub_: Stub is a dummy piece of code that lets test run, but you don't care what happens.
+- _Mock_: Mock is a dummy piece of code that you **VERIFY** is called correctly as part of the test.
+- _Spy_: Spy is a dummy piece of code that intercepts some calls to a real piece of code, allowing you to verify calls without replacing the entire original object.
 
 # part 19
 
@@ -491,4 +492,17 @@ Change detection
 - change detection is the backbone of the Angular framework, each component has its own change detector.
 - Angular detects changes in the data of the component and can rerender the view of the component data. Angular make sure the model and view of the data in the component are in sync.
 - change detection means updating the view when the model (data) change.
+
+# part 20
+
+See https://www.youtube.com/watch?v=4mfNm-oypGs&list=PL5Agzt13Z4g_D7RjXZN8h3nR_Gpf-rcjJ&index=20
+
+Debugging element and DOM events
+
+- DebugElement is an Angular class that contains all kinds of references and methods relevant to investigate an element as well as the component. Example: `fixture.debugElement.query(By.css('#h1'))`
+- Instead of creating an HTML element tree Angular creates a DebugElement tree that wraps the native elements for the runtime platform.
+- The nativeElement property unwraps the DebugElement and returns the platform specific element object.
+- NativeElement returns a reference to the DOM element.
+- triggerEventHandler is a function that exists on Angulars DebugElement.
+- See https://angular.io/api/core/DebugElement 
 

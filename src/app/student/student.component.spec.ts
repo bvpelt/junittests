@@ -4,11 +4,14 @@ import { StudentService } from "../services/student.service";
 import { StudentComponent } from "./student.component";
 import { provideRouter } from "@angular/router";
 import { of } from "rxjs";
+import { DebugElement } from "@angular/core";
+import { By } from "@angular/platform-browser";
 
 describe("StudentComponent", () => {
   let component: StudentComponent;
   let fixture: ComponentFixture<StudentComponent>;
   let h1: HTMLElement;
+  let deb: DebugElement;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
@@ -27,6 +30,8 @@ describe("StudentComponent", () => {
       (component as any).calculate = (a: number, b: number) => a + b;
     }
     fixture.detectChanges();
+
+    deb = fixture.debugElement;
   });
 
   it("should create", () => {
@@ -70,5 +75,59 @@ describe("StudentComponent", () => {
     component.StudentSchoolResult();
     fixture.detectChanges(); // Cruxial: Initial value is '', make sure latest changes are reflected
     expect(h1.textContent).toBe(component.studentResult);
+  });
+
+  it("Increate count click", () => {
+    // find the button and h1 elements in the DOM
+    const btn = deb.query(By.css("#btnincreaseNumber"));
+    const btn2 = deb.query(
+      (d) => d.name === "button" && d.attributes["id"] === "btnincreaseNumber"
+    );
+    const h1 = deb.query(By.css("#countnumber"));
+    const h12 = deb.query(
+      (h1) => h1.name === "h1" && h1.attributes["id"] === "countnumber"
+    );
+    //deb.query(By.css("countnumber"));
+
+    // Get initial count value
+    let initialCount = component.CountNumber;
+
+    // generate event click on the button
+    btn.triggerEventHandler("click", {});
+
+    // reflect the changes
+    fixture.detectChanges();
+
+    expect(component.CountNumber).toEqual(
+      parseInt(h1.nativeElement.innerText, 10)
+    );
+    expect(component.CountNumber).toBe(initialCount + 1);
+  });
+
+   it("Decreate count click", () => {
+    // find the button and h1 elements in the DOM
+    const btn = deb.query(By.css("#btndecreaseNumber"));
+    const btn2 = deb.query(
+      (d) => d.name === "button" && d.attributes["id"] === "btndecreaseNumber"
+    );
+    const h1 = deb.query(By.css("#countnumber"));
+    const h12 = deb.query(
+      (h1) => h1.name === "h1" && h1.attributes["id"] === "countnumber"
+    );
+    //deb.query(By.css("countnumber"));
+
+    // Get initial count value
+    let initialCount = component.CountNumber;
+
+    // generate event click on the button
+    btn.triggerEventHandler("click", {});
+
+    // reflect the changes
+    fixture.detectChanges();
+
+    expect(component.CountNumber).toEqual(
+      parseInt(h1.nativeElement.innerText, 10)
+    );
+    expect(component.CountNumber).toBe(initialCount - 1);
   });
 });

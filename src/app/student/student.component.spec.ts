@@ -71,6 +71,4 @@ describe("StudentComponent", () => {
     fixture.detectChanges(); // Cruxial: Initial value is '', make sure latest changes are reflected
     expect(h1.textContent).toBe(component.studentResult);
   });
-
-  
 });

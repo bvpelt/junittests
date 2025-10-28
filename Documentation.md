@@ -518,3 +518,12 @@ See https://www.youtube.com/watch?v=oZjdvSs8_Jk&list=PL5Agzt13Z4g_D7RjXZN8h3nR_G
 
 Spyon private methods
 
+# part 23
+
+See https://www.youtube.com/watch?v=omHcoBB6TvU&list=PL5Agzt13Z4g_D7RjXZN8h3nR_Gpf-rcjJ&index=23
+
+Unit test on Interpolation
+
+Interpolation is a technique that allows the user to bind a value to a UIElement. The binding is a one-way binding. This means when the value of a field bound using interpolation changes, the representation of the field on a page also changes.
+The return type of the interpolation is always a string.
+

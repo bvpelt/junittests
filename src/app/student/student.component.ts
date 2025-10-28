@@ -12,8 +12,12 @@ export class StudentComponent implements OnInit {
   result: any;
   studentResult: string = "";
   CountNumber: number = 0;
-  name: string = "";
+  name: string = "Dot Net Office";
   private pname: string = "";
+  num1: number = 100;
+  num2: number = 20;
+  type = "number";
+  placeholder = "give number";
 
   constructor(public service: StudentService) {}
 

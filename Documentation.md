@@ -536,3 +536,9 @@ Unit test on property binding
 Interpolation is a special syntax that Angular converts into Property binding (a pair of square brackets). It's a convenient alternative to property binding.
 To set an element property to a non-string value we must use property binding.
 
+# part 25
+
+See https://www.youtube.com/watch?v=O8IbljrQMI4&list=PL5Agzt13Z4g_D7RjXZN8h3nR_Gpf-rcjJ&index=25
+
+Unit test on ngClass and ngStyle binding
+

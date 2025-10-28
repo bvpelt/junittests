@@ -24,4 +24,11 @@
 
 <h1 id="name">{{ name }}</h1>
 
-<input id="usenum" type="{{type}}" placeholder="{{placeholder}}" />
+<!--
+The value of {{userreadonly}} is a string but readonly property expects a boolean.
+So we cannot use interpolation here.
+To set a property to a non-string value we must use property binding.
+<input id="usenum" type="{{ type }}" placeholder="{{ placeholder }}" readonly="{{userreadonly}}" />
+-->
+
+<input id="usenum" type="{{ type }}" placeholder="{{ placeholder }}" [readonly]="userreadonly" />

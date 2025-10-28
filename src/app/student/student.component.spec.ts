@@ -174,9 +174,9 @@ describe("StudentComponent", () => {
     expect(name.innerHTML).toBe(component.name);
   });
 
-  
   it("Interpolation for textbox", () => {
-    const inputval: HTMLInputElement = fixture.debugElement.nativeElement.querySelector("#usenum");
+    const inputval: HTMLInputElement =
+      fixture.debugElement.nativeElement.querySelector("#usenum");
     expect(inputval.type).toBe(component.type);
     expect(inputval.placeholder).toBe(component.placeholder);
 
@@ -186,6 +186,9 @@ describe("StudentComponent", () => {
     fixture.detectChanges(); // Essential to reflect the changes in the template
     expect(inputval.type).toEqual(component.type);
     expect(inputval.placeholder).toEqual(component.placeholder);
+
+    expect(inputval.readOnly).toBeFalsy();
+    expect(inputval.readOnly).toBe(component.userreadonly);
+
   });
-  
 });

@@ -527,3 +527,12 @@ Unit test on Interpolation
 Interpolation is a technique that allows the user to bind a value to a UIElement. The binding is a one-way binding. This means when the value of a field bound using interpolation changes, the representation of the field on a page also changes.
 The return type of the interpolation is always a string.
 
+# part 24
+
+See https://www.youtube.com/watch?v=83vfCU6vZy8&list=PL5Agzt13Z4g_D7RjXZN8h3nR_Gpf-rcjJ&index=24
+
+Unit test on property binding
+
+Interpolation is a special syntax that Angular converts into Property binding (a pair of square brackets). It's a convenient alternative to property binding.
+To set an element property to a non-string value we must use property binding.
+

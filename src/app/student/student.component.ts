@@ -18,6 +18,7 @@ export class StudentComponent implements OnInit {
   num2: number = 20;
   type = "number";
   placeholder = "give number";
+  userreadonly: boolean = false;
 
   constructor(public service: StudentService) {}
 

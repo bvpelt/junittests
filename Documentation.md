@@ -504,7 +504,7 @@ Debugging element and DOM events
 - The nativeElement property unwraps the DebugElement and returns the platform specific element object.
 - NativeElement returns a reference to the DOM element.
 - triggerEventHandler is a function that exists on Angulars DebugElement.
-- See https://angular.io/api/core/DebugElement 
+- See https://angular.io/api/core/DebugElement
 
 # part 21
 
@@ -542,3 +542,8 @@ See https://www.youtube.com/watch?v=O8IbljrQMI4&list=PL5Agzt13Z4g_D7RjXZN8h3nR_G
 
 Unit test on ngClass and ngStyle binding
 
+# part 26
+
+See https://www.youtube.com/watch?v=85JmKxWnFwY&list=PL5Agzt13Z4g_D7RjXZN8h3nR_Gpf-rcjJ&index=26
+
+Unit test on Attribute binding

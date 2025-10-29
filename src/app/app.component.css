@@ -1,11 +1,51 @@
 :host {
-  nav {
-    margin-left: 0;
-    padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+}
+
+:host nav {
+  margin-left: 0;
+  padding: 0;
+  display: flex;
+  /* FIX 1: Allow items to wrap onto multiple lines */
+  flex-wrap: wrap; 
+  /* Use gap for consistent spacing between wrapped elements */
+  gap: 8px; 
+}
+
+:host nav a {
+  /* FIX 2: Set minimum width */
+  min-width: 50px; 
+  
+  /* Center the text inside the 50px minimum width box */
+  justify-content: center; 
+  align-items: center;
+
+  /* Clean up old margin properties, relying on gap in :host nav */
+  margin-right: 0px;
+  margin-left: 0px;
+  
+  padding: 4px 4px;
+  display: inline-flex; 
+  background-color: #6b7280; /* Darker gray for better contrast */
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: 500;
+  text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  :host {
+    padding: 10px;
   }
 
-  nav a {
-    margin-right: 10px;
-    margin-left: 0px;
+  :host nav {
+    /* FIX 3: Remove restrictive width settings and just let it wrap across the full width */
+    justify-content: flex-start; 
+    width: 100%;
   }
 }

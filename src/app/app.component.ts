@@ -8,7 +8,7 @@ import { RouterModule, RouterOutlet } from "@angular/router";
   styleUrl: "./app.component.css",
 })
 export class AppComponent {
-  title = "junittests";
+  title = "Welcome to Angular Testing Tutorial";
 
   showMessage(msg: string): string {
     return msg;

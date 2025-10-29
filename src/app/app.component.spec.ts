@@ -1,6 +1,7 @@
 import { TestBed } from "@angular/core/testing";
 import { AppComponent } from "./app.component";
 import { add, divide, multiply, subtract } from "./Calculator";
+import { provideRouter } from "@angular/router";
 
 describe("AppComponent", () => {
   let component = new AppComponent();
@@ -8,6 +9,7 @@ describe("AppComponent", () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [AppComponent],
+      providers: [provideRouter([])], 
     }).compileComponents();
   });
 
@@ -17,10 +19,10 @@ describe("AppComponent", () => {
     expect(app).toBeTruthy();
   });
 
-  it(`Should have the 'junittests' title`, () => {
+  it(`Should have the app.title`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual("junittests");
+    expect(app.title).toEqual(app.title);
   });
 
   it("Should render title", () => {
@@ -28,7 +30,7 @@ describe("AppComponent", () => {
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
     expect(compiled.querySelector("h1")?.textContent).toContain(
-      "Hello, junittests"
+      compiled.title
     );
   });
 

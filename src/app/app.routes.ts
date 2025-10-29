@@ -3,10 +3,48 @@ import { Part02Component } from "./part02/part02.component";
 import { Part03Component } from "./part03/part03.component";
 import { Part04Component } from "./part04/part04.component";
 import { Part05Component } from "./part05/part05.component";
+import { Part06Component } from "./part06/part06.component";
+import { Part07Component } from "./part07/part07.component";
+import { Part08Component } from "./part08/part08.component";
+import { Part09Component } from "./part09/part09.component";
+import { Part10Component } from "./part10/part10.component";
+import { Part11Component } from "./part11/part11.component";
+import { Part12Component } from "./part12/part12.component";
+import { Part13Component } from "./part13/part13.component";
+import { Part14Component } from "./part14/part14.component";
+import { Part15Component } from "./part15/part15.component";
+import { Part16Component } from "./part16/part16.component";
+import { Part17Component } from "./part17/part17.component";
+import { Part18Component } from "./part18/part18.component";
+import { Part19Component } from "./part19/part19.component";
+import { Part20Component } from "./part20/part20.component";
+import { Part21Component } from "./part21/part21.component";
+import { Part22Component } from "./part22/part22.component";
+import { Part24Component } from "./part24/part24.component";
+import { Part23Component } from "./part23/part23.component";
 
 export const routes: Routes = [
   { path: "part02", component: Part02Component },
   { path: "part03", component: Part03Component },
   { path: "part04", component: Part04Component },
   { path: "part05", component: Part05Component },
+  { path: "part06", component: Part06Component },
+  { path: "part07", component: Part07Component },
+  { path: "part08", component: Part08Component },
+  { path: "part09", component: Part09Component },
+  { path: "part10", component: Part10Component },
+  { path: "part11", component: Part11Component },
+  { path: "part12", component: Part12Component },
+  { path: "part13", component: Part13Component },
+  { path: "part14", component: Part14Component },
+  { path: "part15", component: Part15Component },
+  { path: "part16", component: Part16Component },
+  { path: "part17", component: Part17Component },
+  { path: "part18", component: Part18Component },
+  { path: "part19", component: Part19Component },
+  { path: "part20", component: Part20Component },
+  { path: "part21", component: Part21Component },
+  { path: "part22", component: Part22Component },
+  { path: "part23", component: Part23Component },
+  { path: "part24", component: Part24Component },
 ];

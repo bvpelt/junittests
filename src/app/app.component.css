@@ -1,0 +1,11 @@
+:host {
+  nav {
+    margin-left: 0;
+    padding: 0;
+  }
+
+  nav a {
+    margin-right: 10px;
+    margin-left: 0px;
+  }
+}

@@ -1,36 +1,12 @@
-<button type="button" [attr.aria-label]="ariaLabel" id="buttonid">Save</button>
+<p>title: {{ title }}</p>
 
-<table border="1">
-  <thead>
-    <tr>
-      <th [attr.colspan]="columnSpan" id="colId">{{ pageHeader }}</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>First Name</td>
-      <td>{{ FirstName }}</td>
-    </tr>
-    <tr>
-      <td>Last Name</td>
-      <td>{{ LastName }}</td>
-    </tr>
+<p [ngClass]="redColor" id="header">Student portal!</p>
 
-    <tr>
-      <td>Branch</td>
-      <td>{{ Branch }}</td>
-    </tr>
-    <tr>
-      <td>Mobile</td>
-      <td>{{ Mobile }}</td>
-    </tr>
-    <tr>
-      <td>Gender</td>
-      <td>{{ Gender }}</td>
-    </tr>
-    <tr>
-      <td>Age</td>
-      <td>{{ Age }}</td>
-    </tr>
-  </tbody>
-</table>
+<h1 [ngClass]="num > 10 ? 'font-blue' : 'font-red'" id="header1">
+  is number is greater than 10?
+</h1>
+
+<p [ngStyle]="{ color: num > 10 ? 'black' : 'green' }" id="styleheader">
+  Student portal style!
+</p>
+

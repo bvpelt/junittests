@@ -1,30 +1,51 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { Part25Component } from './part25.component';
+import { Part25Component } from "./part25.component";
 
-describe('Part25Component', () => {
+describe("Part25Component", () => {
   let component: Part25Component;
   let fixture: ComponentFixture<Part25Component>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [Part25Component]
-    })
-    .compileComponents();
+      imports: [Part25Component],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(Part25Component);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 
-  it('Table colspan attribute test', () => {
-    const element: HTMLTableElement = fixture.debugElement.nativeElement.querySelector('#colId');
+  it("ngClass testcase for paragraph", () => {
+    const element: HTMLElement =
+      fixture.debugElement.nativeElement.querySelector("#header");
+    expect(element.getAttribute("class")).toContain("font-red");
+  });
 
-    expect(element.getAttribute('colspan')).toEqual(component.columnSpan.toString());  
-    });
+  it("ngClass testcase for h1", () => {
+    const element: HTMLElement =
+      fixture.debugElement.nativeElement.querySelector("#header1");
+    expect(element.getAttribute("class")).toContain("font-blue");
 
+    component.num = 5;
+    fixture.detectChanges();
+
+    expect(element.getAttribute("class")).toContain("font-red");
+
+    component.num = 10;
+    fixture.detectChanges();
+
+    expect(element.getAttribute("class")).toContain("font-red");
+  });
+
+  it("ngClass testcase for paragraph style", () => {
+    const element: HTMLElement =
+      fixture.debugElement.nativeElement.querySelector("#styleheader");
+    expect(element.getAttribute("style")).toContain("color: black;");
+  });
+ 
 });

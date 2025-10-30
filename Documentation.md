@@ -547,3 +547,13 @@ Unit test on ngClass and ngStyle binding
 See https://www.youtube.com/watch?v=85JmKxWnFwY&list=PL5Agzt13Z4g_D7RjXZN8h3nR_Gpf-rcjJ&index=26
 
 Unit test on Attribute binding
+
+# part 27
+
+See https://www.youtube.com/watch?v=JXHA48fkiUU&list=PL5Agzt13Z4g_D7RjXZN8h3nR_Gpf-rcjJ&index=27
+
+Unit test on event binding
+
+# part 28
+
+See https://www.youtube.com/watch?v=_OqHcOHp8LE&list=PL5Agzt13Z4g_D7RjXZN8h3nR_Gpf-rcjJ&index=28

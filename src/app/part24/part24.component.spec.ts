@@ -19,6 +19,24 @@ describe("Part24Component", () => {
     expect(component).toBeTruthy();
   });
 
+  it("Interpolation for textbox", () => {
+    const inputval: HTMLInputElement =
+      fixture.debugElement.nativeElement.querySelector("#usenum");
+    expect(inputval.type).toBe(component.type);
+    expect(inputval.placeholder).toBe(component.placeholder);
+
+    // change component type and placeholder and reflect the changes
+    component.type = "text";
+    component.placeholder = "Enter text here";
+    fixture.detectChanges(); // Essential to reflect the changes in the template
+    expect(inputval.type).toEqual(component.type);
+    expect(inputval.placeholder).toEqual(component.placeholder);
+
+    expect(inputval.readOnly).toBeFalsy();
+    expect(inputval.readOnly).toBe(component.userreadonly);
+  });
+
+  /*
   it("ngClass testcase for paragraph", () => {
     const element: HTMLElement =
       fixture.debugElement.nativeElement.querySelector("#header");
@@ -46,4 +64,5 @@ describe("Part24Component", () => {
       fixture.debugElement.nativeElement.querySelector("#styleheader");
     expect(element.getAttribute("style")).toContain("color: black;");
   });
+  */
 });

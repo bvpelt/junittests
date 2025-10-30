@@ -1,0 +1,44 @@
+<p>title: {{ title }}</p>
+
+<button type="button" [attr.aria-label]="ariaLabel" id="buttonid">Save</button>
+
+<div class="mytable">
+  <table border="1">
+    <thead>
+      <tr>
+        <!--
+        <th colspan="2" id="colId">{{ pageHeader }}</th>
+        <th [colSpan]="columnSpan" id="colId">{{ pageHeader }}</th>
+        -->
+        <th [attr.colspan]="columnSpan" id="colId">{{ pageHeader }}</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>First Name</td>
+        <td>{{ FirstName }}</td>
+      </tr>
+      <tr>
+        <td>Last Name</td>
+        <td>{{ LastName }}</td>
+      </tr>
+
+      <tr>
+        <td>Branch</td>
+        <td>{{ Branch }}</td>
+      </tr>
+      <tr>
+        <td>Mobile</td>
+        <td>{{ Mobile }}</td>
+      </tr>
+      <tr>
+        <td>Gender</td>
+        <td>{{ Gender }}</td>
+      </tr>
+      <tr>
+        <td>Age</td>
+        <td>{{ Age }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -25,6 +25,8 @@ import { Part23Component } from "./part23/part23.component";
 import { Part25Component } from "./part25/part25.component";
 import { Part26Component } from "./part26/part26.component";
 import { Part27Component } from "./part27/part27.component";
+import { Part28Component } from "./part28/part28.component";
+import { Part29Component } from "./part29/part29.component";
 
 export const routes: Routes = [
   { path: "part02", component: Part02Component },
@@ -53,4 +55,6 @@ export const routes: Routes = [
   { path: "part25", component: Part25Component },
   { path: "part26", component: Part26Component },
   { path: "part27", component: Part27Component },
+  { path: "part28", component: Part28Component },
+  { path: "part29", component: Part29Component },
 ];

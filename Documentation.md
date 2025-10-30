@@ -557,3 +557,21 @@ Unit test on event binding
 # part 28
 
 See https://www.youtube.com/watch?v=_OqHcOHp8LE&list=PL5Agzt13Z4g_D7RjXZN8h3nR_Gpf-rcjJ&index=28
+
+WhenStable, Async Test and twoWay data binding
+
+- *WhenStable*, the fixture.whenStable() returns a promise that resolves when the javascript engine's task queue becomes empty.
+- *Async*, the async utility tells Angular to run the code in a dedicated test zone that intercepts promises. The use of async with whenStable allows us to wait until all promises have been resolved to run our expectations.
+- the test resumes within the promise callback, which calls detectChanges() to update the quote element with the expected text.
+
+# part 29
+
+See https://www.youtube.com/watch?v=ZPAJanzPD70&list=PL5Agzt13Z4g_D7RjXZN8h3nR_Gpf-rcjJ&index=29
+
+fakeAsync and async
+
+*Async testing*
+- for the jasmine done function and spy callbacks we attach specific callbacks to spies so we know when promises are resolved. We add our testing code to those callbacks and then call the done function.
+- when using Angular async and whenStable functions we don't need to track the promises ourselves but still need to lay our code out via callback functions which can be hard to read.
+- we can use Angular fakeAsync and tick functions, this additionally lets lay out our async test code as if it were synchronous.
+- the problem with async is that we still have to introduce real waiting in our tests. This can make our tests very slow. fakeAsync comes to the rescue and helps to test asynchronous code in a synchronous way.

@@ -1,0 +1,12 @@
+<p>title: {{ title }}</p>
+
+<p>
+  see
+  <a id="githubref" href="{{ ref }}">{{ title }}</a>
+</p>
+
+<div [ngSwitch]="selectedNum" id="div1">
+    <div *ngSwitchCase="'One'" id="div2">One is selected</div>
+    <div *ngSwitchCase="'Two'" id="div3">Two is selected</div>
+    <div *ngSwitchDefault id="div4">Default option</div>
+</div>

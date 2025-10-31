@@ -1,0 +1,22 @@
+<p>title: {{ title }}</p>
+
+<p>
+  see
+  <a id="githubref" href="{{ ref }}">{{ title }}</a>
+</p>
+
+<div *ngIf="num >= 20" id="div1">number is greater or equal than 20</div>
+
+<div *ngIf="num < 20" id="div2">number is less than 20</div>
+
+<div *ngIf="num >= 20; then trueCase; else falseCase" id="div3">
+  number is greater or equal than 20
+</div>
+
+<ng-template #trueCase>
+  <p id="ng1">number is greater than 20 ng-template</p>
+</ng-template>
+
+<ng-template #falseCase>
+  <p id="ng2">number is greater than 20 ng-template</p>
+</ng-template>

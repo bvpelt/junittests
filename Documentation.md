@@ -575,3 +575,21 @@ fakeAsync and async
 - when using Angular async and whenStable functions we don't need to track the promises ourselves but still need to lay our code out via callback functions which can be hard to read.
 - we can use Angular fakeAsync and tick functions, this additionally lets lay out our async test code as if it were synchronous.
 - the problem with async is that we still have to introduce real waiting in our tests. This can make our tests very slow. fakeAsync comes to the rescue and helps to test asynchronous code in a synchronous way.
+
+# part 30
+
+See https://www.youtube.com/watch?v=Uj0kjr8TrtE&list=PL5Agzt13Z4g_D7RjXZN8h3nR_Gpf-rcjJ&index=30
+
+Unit testing on conditional rendering
+
+# part 31
+
+See https://www.youtube.com/watch?v=umaXhliEaPs&list=PL5Agzt13Z4g_D7RjXZN8h3nR_Gpf-rcjJ&index=31
+
+Unit testing on ngSwitch
+
+# part 32
+
+See https://www.youtube.com/watch?v=Ll_cgWMO8Hg&list=PL5Agzt13Z4g_D7RjXZN8h3nR_Gpf-rcjJ&index=32
+
+Unit testing on ngFor

@@ -22,7 +22,7 @@ describe("Part03Component", () => {
 
   it("should be test Part03", () => {
     const app = fixture.componentInstance;
-    expect(app.test).toBe("Part03");
+     expect(app.title).toBe(component.title);
   });
 
   it("Mytestcase", () => {

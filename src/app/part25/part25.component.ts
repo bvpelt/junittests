@@ -9,11 +9,15 @@ import { Component, OnInit } from "@angular/core";
 })
 export class Part25Component implements OnInit {
   title = "Part25";
+  ref = "";
   num = 20;
   redColor = "font-red";
   blueColor = "font-blue";
 
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    let part = this.title.toLowerCase();
+    this.ref = `https://github.com/bvpelt/junittests/blob/main/src/app/${part}/${part}.component.spec.ts`;
+  }
 }

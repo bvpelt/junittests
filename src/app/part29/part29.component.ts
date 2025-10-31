@@ -9,9 +9,13 @@ import { FormsModule } from "@angular/forms"; // needed for two way data binding
 })
 export class Part29Component implements OnInit {
   title = "Part29";
+  ref = "";
   studentName: string = "";
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    let part = this.title.toLowerCase();
+    this.ref = `https://github.com/bvpelt/junittests/blob/main/src/app/${part}/${part}.component.spec.ts`;
+  }
 
   setName() {
     this.studentName = "Dotnet Office";

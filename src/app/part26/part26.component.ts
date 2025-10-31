@@ -8,6 +8,7 @@ import { Component, OnInit } from "@angular/core";
 })
 export class Part26Component implements OnInit {
   title = "Part26";
+  ref = "";
 
   ariaLabel = "NewAriaLabel";
   columnSpan = "2";
@@ -21,5 +22,8 @@ export class Part26Component implements OnInit {
 
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    let part = this.title.toLowerCase();
+    this.ref = `https://github.com/bvpelt/junittests/blob/main/src/app/${part}/${part}.component.spec.ts`;
+  }
 }

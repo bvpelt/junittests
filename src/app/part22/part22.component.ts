@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
 
 @Component({
   selector: "app-part22",
@@ -6,12 +6,18 @@ import { Component } from "@angular/core";
   templateUrl: "./part22.component.html",
   styleUrl: "./part22.component.css",
 })
-export class Part22Component {
+export class Part22Component implements OnInit {
   title = "Part22";
+  ref = "";
   name: string = "Dot Net Office";
   private pname: string = "";
   sum: number = 0;
 
+  ngOnInit(): void {
+    let part = this.title.toLowerCase();
+    this.ref = `https://github.com/bvpelt/junittests/blob/main/src/app/${part}/${part}.component.spec.ts`;
+  }
+  
   private pcalculate(num1: number, num2: number): number {
     console.log("Calculate method called with:", num1, num2);
     this.sum = num1 + num2;

@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
 
 @Component({
   selector: "app-part04",
@@ -6,6 +6,12 @@ import { Component } from "@angular/core";
   templateUrl: "./part04.component.html",
   styleUrl: "./part04.component.css",
 })
-export class Part04Component {
-  test = "Part04";
+export class Part04Component implements OnInit {
+  title = "Part04";
+  ref = "";
+
+  ngOnInit(): void {
+    let part = this.title.toLowerCase();
+    this.ref = `https://github.com/bvpelt/junittests/blob/main/src/app/${part}/${part}.component.spec.ts`;
+  }
 }

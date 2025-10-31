@@ -9,12 +9,16 @@ import { StudentService } from "../services/student.service";
 })
 export class Part18Component implements OnInit {
   title = "Part18";
+  ref = "";
   sum = 0;
   result: any;
 
   constructor(public service: StudentService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    let part = this.title.toLowerCase();
+    this.ref = `https://github.com/bvpelt/junittests/blob/main/src/app/${part}/${part}.component.spec.ts`;
+  }
 
   calculate(num1: number, num2: number): number {
     console.log("Calculate method called with:", num1, num2);

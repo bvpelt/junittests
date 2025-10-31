@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
 
 @Component({
   selector: "app-part15",
@@ -6,10 +6,16 @@ import { Component } from "@angular/core";
   templateUrl: "./part15.component.html",
   styleUrl: "./part15.component.css",
 })
-export class Part15Component {
+export class Part15Component implements OnInit {
   title = "Part15";
+  ref = "";
   Count: number = 10;
 
+  ngOnInit(): void {
+    let part = this.title.toLowerCase();
+    this.ref = `https://github.com/bvpelt/junittests/blob/main/src/app/${part}/${part}.component.spec.ts`;
+  }
+  
   IncreaseCount(num: number): void {
     this.Count += num;
   }

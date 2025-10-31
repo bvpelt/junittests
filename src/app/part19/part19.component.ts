@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
 import { StudentService } from "../services/student.service";
 
 @Component({
@@ -7,15 +7,19 @@ import { StudentService } from "../services/student.service";
   templateUrl: "./part19.component.html",
   styleUrl: "./part19.component.css",
 })
-export class Part19Component {
+export class Part19Component implements OnInit {
   title = "Part19";
+  ref = "";
   sum = 0;
   result: any;
   studentResult: string = "";
 
   constructor(public service: StudentService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    let part = this.title.toLowerCase();
+    this.ref = `https://github.com/bvpelt/junittests/blob/main/src/app/${part}/${part}.component.spec.ts`;
+  }
 
   calculate(num1: number, num2: number): number {
     console.log("Calculate method called with:", num1, num2);

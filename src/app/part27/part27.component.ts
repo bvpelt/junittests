@@ -8,11 +8,15 @@ import { Component, OnInit } from "@angular/core";
 })
 export class Part27Component implements OnInit {
   title = "Part27";
+  ref = "";
   label: string = "Dotnet";
 
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    let part = this.title.toLowerCase();
+    this.ref = `https://github.com/bvpelt/junittests/blob/main/src/app/${part}/${part}.component.spec.ts`;
+  }
 
   button1Click(): void {
     this.label = "Dotnet Office";

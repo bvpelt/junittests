@@ -1,5 +1,15 @@
 <p>title: {{ title }}</p>
 
+<p>
+  see
+  <a id="githubref" href="{{ ref }}">{{ title }}</a>
+</p>
+
 <h1 id="name">{{ name }}</h1>
 
-<input id="usenum" type="{{ type }}" placeholder="{{ placeholder }}" [readonly]="userreadonly" />
+<input
+  id="usenum"
+  type="{{ type }}"
+  placeholder="{{ placeholder }}"
+  [readonly]="userreadonly"
+/>

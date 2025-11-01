@@ -593,3 +593,9 @@ Unit testing on ngSwitch
 See https://www.youtube.com/watch?v=Ll_cgWMO8Hg&list=PL5Agzt13Z4g_D7RjXZN8h3nR_Gpf-rcjJ&index=32
 
 Unit testing on ngFor
+
+# part 33
+
+See https://www.youtube.com/watch?v=01e4Sg_JWM0&list=PL5Agzt13Z4g_D7RjXZN8h3nR_Gpf-rcjJ&index=33
+
+Unit testing on dependency injection

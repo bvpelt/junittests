@@ -1,0 +1,33 @@
+<p>title: {{ title }}</p>
+
+<p>
+  see
+  <a id="githubref" href="{{ ref }}">{{ title }}</a>
+</p>
+
+<div *ngFor="let item of colorNames" class="ngFor1">
+  <div>{{ item }}</div>
+</div>
+
+<p style="color: red">array list for color</p>
+<div *ngFor="let item of colorList" class="ngFor2">
+  <div>item: {{ item.id }} name: {{ item.name }}</div>
+</div>
+
+<p style="color: red">array list for ngFor properties</p>
+<div
+  *ngFor="
+    let item of colorList;
+    let i = index;
+    let f = first;
+    let l = last;
+    let e = even;
+    let o = odd
+  "
+  class="ngFor3"
+>
+  <div>
+    item: {{ item.id }} name: {{ item.name }} index: {{ i }} first:
+    {{ f }} last: {{ l }} even: {{ e }} odd: {{ o }}
+  </div>
+</div>

@@ -29,6 +29,8 @@ import { Part28Component } from "./part28/part28.component";
 import { Part29Component } from "./part29/part29.component";
 import { Part30Component } from "./part30/part30.component";
 import { Part31Component } from "./part31/part31.component";
+import { Part32Component } from "./part32/part32.component";
+import { Part33Component } from "./part33/part33.component";
 
 export const routes: Routes = [
   { path: "part02", component: Part02Component },
@@ -61,4 +63,6 @@ export const routes: Routes = [
   { path: "part29", component: Part29Component },
   { path: "part30", component: Part30Component },
   { path: "part31", component: Part31Component },
+  { path: "part32", component: Part32Component },
+  { path: "part33", component: Part33Component },
 ];

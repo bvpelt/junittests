@@ -1,0 +1,14 @@
+<p>title: {{ title }}</p>
+
+<p>
+  see
+  <a id="githubref" href="{{ ref }}">{{ title }}</a>
+</p>
+
+<h4>{{ title | uppercase }} <br /></h4>
+<h4>{{ title | lowercase }} <br /></h4>
+
+<p style="color: red">Custom pipe</p>
+<h4>without filepipe {{ size }}</h4>
+<h4>with filepipe {{ size | fileSize }}</h4>
+<h4>with filepipe and extension {{ size | fileSize : "GB" }}</h4>

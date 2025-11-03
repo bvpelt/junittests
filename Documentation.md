@@ -599,3 +599,28 @@ Unit testing on ngFor
 See https://www.youtube.com/watch?v=01e4Sg_JWM0&list=PL5Agzt13Z4g_D7RjXZN8h3nR_Gpf-rcjJ&index=33
 
 Unit testing on dependency injection
+
+Dependency injection is a designpattern in which a class request depends from an external source, rather than creating it.
+Angulars DI (Dependeny injection) framework provides dependencies to a class upon instantiation.
+Use Angular DI to increase flexibility an modularity in applications.
+
+DI and testing
+- TestBed is a mock environment to run Angular component tests without the browser
+- The TestBed is the first and largest of the Angular testing utilities. It creates an Angular testing module = a NgModule class - that you configure with the configureTestingModule method to produce the module environment for the class you want to test.
+- Using TestBet get method
+- Using inject method
+- By overriding component provider
+
+# part 34
+
+See https://www.youtube.com/watch?v=2QvsyfaDGDI&list=PL5Agzt13Z4g_D7RjXZN8h3nR_Gpf-rcjJ&index=34
+
+Unit test case on pipe
+
+Pipe in Angular
+
+- Pipes are referred to as filters
+- It helps to transform data and manage data within interpolation, denoted by {{ | }}
+- It accepts data, arrays, integers and strings as input which are seperated by the '|' symbol.
+
+example: `ng generate pipe fileSize`

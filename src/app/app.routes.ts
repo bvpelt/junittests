@@ -31,6 +31,7 @@ import { Part30Component } from "./part30/part30.component";
 import { Part31Component } from "./part31/part31.component";
 import { Part32Component } from "./part32/part32.component";
 import { Part33Component } from "./part33/part33.component";
+import { Part34Component } from "./part34/part34.component";
 
 export const routes: Routes = [
   { path: "part02", component: Part02Component },
@@ -65,4 +66,5 @@ export const routes: Routes = [
   { path: "part31", component: Part31Component },
   { path: "part32", component: Part32Component },
   { path: "part33", component: Part33Component },
+  { path: "part34", component: Part34Component },
 ];

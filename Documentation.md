@@ -624,3 +624,21 @@ Pipe in Angular
 - It accepts data, arrays, integers and strings as input which are seperated by the '|' symbol.
 
 example: `ng generate pipe fileSize`
+
+# part 35
+
+See https://www.youtube.com/watch?v=UOG9XWhZepY&list=PL5Agzt13Z4g_D7RjXZN8h3nR_Gpf-rcjJ&index=35
+
+Unit testing @Input @Output directive
+
+# part 36
+
+See https://www.youtube.com/watch?v=nm3214rYZno&list=PL5Agzt13Z4g_D7RjXZN8h3nR_Gpf-rcjJ&index=36
+
+Unit testing on routing
+
+Routing in Angular
+- Routing is an important key feature for frontend frameworks
+- it is the proces of dividing the UI of an application using URL's
+- it allows developers to build modern single-page applications that can be loaded once by a browser and provide multiple views.
+

@@ -1,4 +1,5 @@
 import { Routes } from "@angular/router";
+
 export const routes: Routes = [
   {
     path: "part02",
@@ -175,12 +176,24 @@ export const routes: Routes = [
     path: "part36",
     loadComponent: () =>
       import("./part36/part36.component").then((m) => m.Part36Component),
+    children: [
+      {
+        path: "student",
+        loadComponent: () =>
+          import("./part36/studpart36/studpart36.component").then(
+            (m) => m.Studpart36Component
+          ),
+      },
+    ],
   },
   {
-    path: "part36/student",
+    path: "redirect/student",
+    redirectTo: "/part36/student",
+    pathMatch: "full",
+  },
+  {
+    path: "part37",
     loadComponent: () =>
-      import("./part36/studpart26/studpart26.component").then(
-        (m) => m.Studpart26Component
-      ),
+      import("./part37/part37.component").then((m) => m.Part37Component),
   },
 ];

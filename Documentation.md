@@ -642,3 +642,9 @@ Routing in Angular
 - it is the proces of dividing the UI of an application using URL's
 - it allows developers to build modern single-page applications that can be loaded once by a browser and provide multiple views.
 
+# part 37
+
+See https://www.youtube.com/watch?v=PcwFcBsTAtM&list=PL5Agzt13Z4g_D7RjXZN8h3nR_Gpf-rcjJ&index=37
+
+Unit testing on lazy loading
+

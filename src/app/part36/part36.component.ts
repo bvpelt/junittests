@@ -1,8 +1,9 @@
 import { Component, OnInit } from "@angular/core";
+import { RouterLink, RouterOutlet } from "@angular/router";
 
 @Component({
   selector: "app-part36",
-  imports: [],
+  imports: [RouterLink, RouterOutlet],
   templateUrl: "./part36.component.html",
   styleUrl: "./part36.component.css",
 })

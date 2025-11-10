@@ -1,0 +1,28 @@
+/* This targets the <div> containing your router links */
+div {
+  display: flex; /* Arranges the links in a row */
+  flex-wrap: wrap; /* Allows links to wrap on small screens */
+  gap: 1.5rem; /* Modern way to add 1.5rem of space BETWEEN each link */
+  
+  /* Some extra styling to make it look like a nav bar */
+  padding: 1rem;
+  background-color: #f8f9fa; /* A light grey background */
+  border-bottom: 1px solid #dee2e6; /* A subtle separator line */
+}
+
+/* Style the links themselves */
+div a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #007bff; /* A standard link blue */
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.25rem; /* Slightly rounded corners */
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+/* Add a hover effect so users know they are clickable */
+div a:hover {
+  background-color: #007bff;
+  color: #ffffff;
+  text-decoration: none;
+}

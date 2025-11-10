@@ -648,3 +648,48 @@ See https://www.youtube.com/watch?v=PcwFcBsTAtM&list=PL5Agzt13Z4g_D7RjXZN8h3nR_G
 
 Unit testing on lazy loading
 
+Lazy loading
+- a technology of angular that allows you to load Javascript components when a specific route is activated. It improves application load time speed by splitting the application into many bundles. Bundles are loaded when needed.
+- helps to keep bundle size small, which reduces load times.
+- an Angular module might be a unit to load. The @NgModule and decorators uses a metadata object to define the module. Main properties are:
+  - import: Components of the module are used with other modules
+  - decorations: it receives an array of components
+  - exports: defines components usable by other modules
+  - providers: declares services that are available to the entire application.
+
+# part 38
+
+See https://www.youtube.com/watch?v=ZS1k-hxMnh0&list=PL5Agzt13Z4g_D7RjXZN8h3nR_Gpf-rcjJ&index=38
+
+Unit test cases on Http Client or service methods
+
+- To perform theses tests one uses the HttpClientTestingModule.
+- The HttpClientTestingModule injects the HttpTestingController.
+- The HttpClientTestingModule allows you to easily mock HTTP requests by providing you with the HttpTestingController service.
+- Using the HttpClientTestingModule and HttpTestingController provided by Angular makes mocking of testing results and testing http request possible. By providing many useful methods for checking http requests and providing mock responses for each request.
+
+Examples of methods based on class definition
+
+```typescript
+abstract class HttpTestingController {
+  abstract match(match: string | RequestMatch | ((req: HtpRequest<any>) => boolean)): TestRequest[];
+  abstract expectOne(url: string, description?: string): TestRequest;
+  abstract expectNone(url: string, description?: string): void;
+  abstract verify(opts?: {ignoreCanceled?: boolean}): void;
+}
+```
+
+## TestRequest
+TestRequest is the response, a mock request that was received and is ready to be answered.
+It contains a property `cancelled`. That indicates wheter the request was cancelled after it is send.
+
+Methods of test request
+- flush(), resolve the request by returning a body with additional HTTP information (such as response headers) if provided. If the request specifies an expected body type, the body is converted into the requested type. The default reponsetype is JSON.
+- error(), resolve the request by returning an ErrorEvent (e.g. simulating a network failure). 
+- event(), Deliver an arbitrary HttpEvent (such as progress event) on the response stream for the event.
+
+## JSONPlaceholder
+The JSONPlaceholder is a free online REST API that you can use whenever you need some fake data.
+see https://jsonplaceholder.typicode.com/.
+
+An alternative could be nodered (https://nodered.org) which makes it possible to provide data and behaviour. This can be placed in a docker image.

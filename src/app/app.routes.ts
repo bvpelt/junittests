@@ -1,4 +1,7 @@
 import { Routes } from "@angular/router";
+import { LazyModule } from "./part37/lazy/lazy.module";
+import { HomeComponent } from "./part37/home/home/home.component";
+import { AboutComponent } from "./part37/about/about/about.component";
 
 export const routes: Routes = [
   {
@@ -195,5 +198,39 @@ export const routes: Routes = [
     path: "part37",
     loadComponent: () =>
       import("./part37/part37.component").then((m) => m.Part37Component),
+  },
+  {
+    path: "employeelist",
+    loadChildren: () =>
+      import("./part37/lazy/lazy.module").then((m) => LazyModule),
+  },
+  {
+    path: "about",
+    component: AboutComponent,
+  },
+  {
+    path: "home",
+    component: HomeComponent,
+  },
+
+  {
+    path: "part38",
+    loadComponent: () =>
+      import("./part38/part38.component").then((m) => m.Part38Component),
+  },
+  {
+    path: "part39",
+    loadComponent: () =>
+      import("./part39/part39.component").then((m) => m.Part39Component),
+  },
+  {
+    path: "part40",
+    loadComponent: () =>
+      import("./part40/part40.component").then((m) => m.Part40Component),
+  },
+  {
+    path: "part41",
+    loadComponent: () =>
+      import("./part41/part41.component").then((m) => m.Part41Component),
   },
 ];

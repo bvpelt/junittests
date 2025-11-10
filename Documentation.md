@@ -693,3 +693,35 @@ The JSONPlaceholder is a free online REST API that you can use whenever you need
 see https://jsonplaceholder.typicode.com/.
 
 An alternative could be nodered (https://nodered.org) which makes it possible to provide data and behaviour. This can be placed in a docker image.
+
+# part 39
+
+See https://www.youtube.com/watch?v=8ExnbPphkr4&list=PL5Agzt13Z4g_D7RjXZN8h3nR_Gpf-rcjJ&index=39
+
+Unit test case on Subscribe method.
+
+# part 40
+
+See https://www.youtube.com/watch?v=tHnRCGR5rbI&list=PL5Agzt13Z4g_D7RjXZN8h3nR_Gpf-rcjJ&index=40
+
+Unit test for createSpy CreateSpyObj spyOn
+
+- use spyOn when there is a specific method.
+- use createSpy when there is no function to spy on. It will track calls and arguments like a spyOn but there is no implementation.
+- use CreateSpyObj to create a mock that will spy on one or more methods. It returns an object that has a propertyfor each string that is a spy.
+
+# part 41
+
+See https://www.youtube.com/watch?v=DcZog1vjA4Q&list=PL5Agzt13Z4g_D7RjXZN8h3nR_Gpf-rcjJ&index=41
+
+unit test cases on reactive forms
+
+Howto use reactive forms
+- reactive forms are forms in which we define the structure of the form in the component class
+- we can create the form with Form Groups, Form Controls and Form Arrays
+- you also can define validation rules in the component class. Then we bind it to the HTML form in the template
+- to use reactive form controls, import ReactiveFormsModule from @angular/forms and add it to the NgModule's import array
+- to register a single form control import the FormControl class and create a new instance of the FormControl to save as a class property.
+
+This module needs bootstrap.
+Which is added from https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css into index.html

@@ -4,3 +4,15 @@
   see
   <a id="githubref" href="{{ ref }}">{{ title }}</a>
 </p>
+
+<div>
+  <ul>
+    <li *ngFor="let post of postData">
+      <span>{{post.id}}</span>
+      <span>{{post.userId}}</span>
+      <span>{{post.name}}</span>
+      <span>{{post.title}}</span>
+      <span>{{post.body}}</span>
+    </li>
+  </ul>
+</div>

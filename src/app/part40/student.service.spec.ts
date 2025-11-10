@@ -12,7 +12,7 @@ import {
 } from "@angular/common/http/testing";
 import { PostModel } from "./post.model";
 
-describe("StudentService - part38", () => {
+describe("StudentService - part40", () => {
   let service: StudentService;
   let httpClient: HttpClient;
   let httpController: HttpTestingController;
@@ -138,7 +138,7 @@ describe("StudentService - part38", () => {
 
     // 4. Verify that the request has an error
     expect(req.error).toBeTruthy();
-    expect(req.error.name).toEqual('error');
+    expect(req.error.name).toEqual("error");
 
     // 5. 'Flush' the request, sending the mock data.
     // This triggers the 'subscribe' block (step 2) to execute.

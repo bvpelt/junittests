@@ -725,3 +725,16 @@ Howto use reactive forms
 
 This module needs bootstrap.
 Which is added from https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css into index.html
+
+# part 42
+
+See https://www.youtube.com/watch?v=5Ueip44kjsQ&list=PL5Agzt13Z4g_D7RjXZN8h3nR_Gpf-rcjJ&index=42
+
+Unit test case on template driven form
+
+Template driven form
+- template driven forms use two-way data binding to update the data model in the component as changes are made in the template and vice versa.
+- template driven forms are forms whe we write logic, validations controls etc in the template part of the code (html code). The template is responsible for setting up the form, the validation, control, group etc.
+
+Differences between template driven and reactive forms:
+- template driven forms are based only on template directives while reactive forms are defined programmatically at the level of the component class. Reactive forms are a better default choice for new applications. They are more powerful and easier to use.

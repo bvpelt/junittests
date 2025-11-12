@@ -233,4 +233,9 @@ export const routes: Routes = [
     loadComponent: () =>
       import("./part41/part41.component").then((m) => m.Part41Component),
   },
+  {
+    path: "part42",
+    loadComponent: () =>
+      import("./part42/part42.component").then((m) => m.Part42Component),
+  },
 ];

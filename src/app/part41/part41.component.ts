@@ -1,27 +1,47 @@
-import { Component, OnInit } from "@angular/core";
 import {
-  FormBuilder,
+  Component,
+  OnInit,
+  ChangeDetectionStrategy, 
+} from "@angular/core";
+import {
+  AbstractControl,
+  NonNullableFormBuilder,
   FormGroup,
+  FormControl,
   ReactiveFormsModule,
   Validators,
+  ValidatorFn,
+  ValidationErrors,
 } from "@angular/forms";
-import { NgIf, NgClass } from "@angular/common";
+
+import { CommonModule } from "@angular/common";
 
 @Component({
   selector: "app-part41",
-  imports: [NgClass, NgIf, ReactiveFormsModule],
+  standalone: true,
+  imports: [CommonModule, ReactiveFormsModule],
   templateUrl: "./part41.component.html",
   styleUrl: "./part41.component.css",
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class Part41Component implements OnInit {
   title = "Part41";
   ref = "";
-  registerForm: FormGroup;
+
+  registerForm: FormGroup<{
+    title: FormControl<string>;
+    firstName: FormControl<string>;
+    lastName: FormControl<string>;
+    email: FormControl<string>;
+    password: FormControl<string>;
+    confirmPassword: FormControl<string>;
+  }>;
+
   submitted: boolean = false;
   submittedMsg: string = "";
 
-  constructor(private formBuilder: FormBuilder) {
-    this.registerForm = this.formBuilder.group(
+  constructor(private fb: NonNullableFormBuilder) {
+    this.registerForm = this.fb.group(
       {
         title: ["", Validators.required],
         firstName: ["", Validators.required],
@@ -30,45 +50,34 @@ export class Part41Component implements OnInit {
         password: ["", [Validators.required, Validators.minLength(6)]],
         confirmPassword: ["", Validators.required],
       },
-      { validator: this.MustMatch("password", "confirmPassword") }
+      { validators: this.MustMatch("password", "confirmPassword") }
     );
   }
 
   ngOnInit(): void {
     let part = this.title.toLowerCase();
     this.ref = `https://github.com/bvpelt/junittests/blob/main/src/app/${part}/${part}.component.spec.ts`;
-
-    /*
-    this.registerForm = this.formBuilder.group(
-      {
-        title: ["", Validators.required],
-        firstName: ["", Validators.required],
-        lastName: ["", Validators.required],
-        email: ["", [Validators.required, Validators.email]],
-        password: ["", [Validators.required, Validators.minLength(6)]],
-        confirmPassword: ["", Validators.required],
-      },
-      { validator: this.MustMatch("password", "confirmPassword") }
-    );
-    */
   }
 
-  get frmRegistration() {
+  // A helper getter makes the template cleaner
+  get f() {
     return this.registerForm.controls;
   }
 
   onSubmit() {
     this.submitted = true;
 
-    // stop if form is invalid
+    this.registerForm.markAllAsTouched(); // to force validation!!
+
     if (this.registerForm.invalid) {
       return;
     }
 
-    // display form values on success
     this.submittedMsg =
-      "SUCCESS!! :-)\n\n" + JSON.stringify(this.registerForm.value, null, 4);
-    alert(this.submitted);
+      "SUCCESS!! :-)\n\n" +
+      JSON.stringify(this.registerForm.getRawValue(), null, 4);
+
+    alert(this.submittedMsg);
   }
 
   onReset() {
@@ -76,20 +85,25 @@ export class Part41Component implements OnInit {
     this.registerForm.reset();
   }
 
-  MustMatch(controlName: string, matchingControlName: string) {
-    return (formGroup: FormGroup) => {
-      const control = formGroup.controls[controlName];
-      const matchingControl = formGroup.controls[matchingControlName];
+  MustMatch(controlName: string, matchingControlName: string): ValidatorFn {
+    return (formGroup: AbstractControl): ValidationErrors | null => {
+      const control = formGroup.get(controlName);
+      const matchingControl = formGroup.get(matchingControlName);
 
-      if (matchingControl.errors && !matchingControl.errors['mustMatch']) {
-        return;
+      if (!control || !matchingControl) {
+        return null;
+      }
+
+      if (matchingControl.errors && !matchingControl.errors["mustMatch"]) {
+        return null;
       }
 
       if (control.value !== matchingControl.value) {
-        matchingControl.setErrors({ MustMatch: true });
+        matchingControl.setErrors({ mustMatch: true });
       } else {
         matchingControl.setErrors(null);
       }
+      return null;
     };
   }
 }

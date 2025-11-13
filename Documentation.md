@@ -738,3 +738,37 @@ Template driven form
 
 Differences between template driven and reactive forms:
 - template driven forms are based only on template directives while reactive forms are defined programmatically at the level of the component class. Reactive forms are a better default choice for new applications. They are more powerful and easier to use.
+
+# part 43
+
+See https://www.youtube.com/watch?v=AuWdhKs8FL0&list=PL5Agzt13Z4g_D7RjXZN8h3nR_Gpf-rcjJ&index=43
+
+Code coverage of angular unit test case
+
+*Code coverage*
+- code coverage also called test coverage, tells you which parts of your code are executed by running the unit and integration tests. Code coverage is expressed as a percentage. For example 80% statements or branches or functions or lines
+- to generate a coverage report run the following command `ng test --nowatch --code-coverage` or `ng test --code-coverage`
+- to generate code coverage of a specific component use `ng test --code-coverage --no-watch --include src/app/<component>` 
+- after running report generation with `ng test --no-watch --code-coverage` a report is available in `<project>/coverage/junittests/index.html`
+
+example:
+```bash
+$ ng test --code-coverage --no-watch --include src/app/part43
+=============================== Coverage summary ===============================
+Statements   : 100% ( 5/5 )
+Branches     : 100% ( 0/0 )
+Functions    : 100% ( 2/2 )
+Lines        : 100% ( 5/5 )
+================================================================================
+```
+
+# part 44
+
+See https://www.youtube.com/watch?v=9HYKU2zzj-0&list=PL5Agzt13Z4g_D7RjXZN8h3nR_Gpf-rcjJ&index=44
+
+Integration Angular with youtube
+
+Add a special angular module
+```bash
+ng add @angular/youtube-player
+```
